@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login page</title>
+    <link rel="stylesheet" type="text/css" href="slidestyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+   <div class="main">
+       <!-- Clickable Login Label -->
+       <a href="login.html">Login</a>
+
+       <!-- Signup Section -->
+       <div class="signup">
+           <form id="signupForm">
+               <label for="chk" aria-hidden="true">Signup</label>
+               <input type="text" name="txt" placeholder="User name" required="">
+               <input type="email" name="txt" placeholder="Email" required="">
+               <input type="password" name="pswd" placeholder="Password" required="">
+               <button>Sign up</button>
+           </form>
+       </div>
+
+       <!-- Login Section (Initially hidden if on the same page) -->
+       <div class="login" id="loginForm" style="display:none;">
+           <form>
+               <label for="chk" aria-hidden="true">Login</label>
+               <input type="email" name="email" placeholder="Email" required="">
+               <input type="password" name="pswd" placeholder="Password" required="">
+               <button>Login</button>
+           </form>
+       </div>
+   </div>
+
+   <script>
+       // JavaScript to show the login form when the "Login" label is clicked
+       document.querySelector('a[href="#loginForm"]').addEventListener('click', function(event) {
+           event.preventDefault();
+           document.getElementById('signupForm').style.display = 'none'; // Hide signup form
+           document.getElementById('loginForm').style.display = 'block'; // Show login form
+       });
+   </script>
+</body>
+</html>

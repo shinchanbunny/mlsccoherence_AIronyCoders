@@ -1,0 +1,23 @@
+{
+  "name": "jwt-ex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo\"Error: no test specified\"&& exit1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "code-step by step",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.1",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
